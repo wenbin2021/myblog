@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: wenbin2021/myblog
+  branch: master
+  base_url: https://api.netlify.com
+  auth_type: implicit
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "博客文章"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "发布日期", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss"}
+      - {label: "是否发布", name: "draft", widget: "boolean", default: false}
+      - {label: "文章内容", name: "body", widget: "markdown"}
