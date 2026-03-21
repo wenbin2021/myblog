@@ -2,7 +2,6 @@ backend:
   name: github
   repo: wenbin2021/myblog
   branch: master
-  base_url: https://api.netlify.com
   auth_type: implicit
 
 media_folder: "static/images/uploads"
