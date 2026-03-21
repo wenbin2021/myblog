@@ -2,6 +2,8 @@ backend:
   name: github
   repo: wenbin2021/myblog
   branch: master
+  base_url: https://myblog-7pv.pages.dev
+  site_url: https://myblog-7pv.pages.dev
   auth_type: implicit
 
 media_folder: "static/images/uploads"
@@ -16,5 +18,5 @@ collections:
     fields:
       - {label: "标题", name: "title", widget: "string"}
       - {label: "发布日期", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss"}
-      - {label: "是否发布", name: "draft", widget: "boolean", default: false}
+      - {label: "是否草稿", name: "draft", widget: "boolean", default: false}
       - {label: "文章内容", name: "body", widget: "markdown"}
